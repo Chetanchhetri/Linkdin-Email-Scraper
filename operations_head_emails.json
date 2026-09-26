@@ -1,362 +1,355 @@
 {
-    "query": "Operations Head \"gmail.com\" India digital marketing",
+    "query": "Marketing Agent",
     "metrics": {
-        "total_domains_crawled": 13,
-        "total_unique_emails_found": 35,
-        "total_linkedin_profiles_found": 13,
-        "total_execution_time_seconds": 53.15,
-        "total_execution_time_formatted": "0m 53.15s"
+        "total_domains_crawled": 11,
+        "total_unique_emails_found": 21,
+        "total_linkedin_profiles_found": 6,
+        "total_execution_time_seconds": 100.95,
+        "total_execution_time_formatted": "1m 40.95s"
     },
     "all_emails": [
-        "%20%20advertiseindiaofficial@gmail.com",
-        "%20plannerbrand@gmail.com",
-        "3-bhk-@-1.03cr-only-9.png",
-        "abuse@firetempmail.com",
-        "advertiseindiaofficial@gmail.com",
-        "bone918@offrework.click",
-        "business@firetempmail.com",
-        "career@niftysolutions.co.in",
-        "contact@digitalmarketingdeal.com",
-        "faswob@yahoomail.pro",
-        "hello@firetempmail.com",
-        "iafteru@gmail.com",
-        "img-google@2x.png",
-        "img-people-farida-charania@2x.png",
-        "img-photo-aqeel-hassan@2x.png",
-        "img-photo-ekin-bayildiran@2x.png",
-        "img-photo-evan-m-wolfson@2x.png",
-        "img-photo-jon-nowakowski@2x.png",
-        "img-photo-ryan-brogan@2x.png",
-        "img-photo-tobia-st-germain@2x.png",
-        "info@example.com",
-        "info@meindia.in",
-        "jupnee@imail.edu.pl",
-        "meindia.ads@gmail.com",
-        "mojgaw@yahoomail.pro",
-        "plannerbrand@gmail.com",
-        "rkay1952@gmail.com",
-        "rofliz@imail.edu.pl",
-        "rotating.sandwiches.inquiries@gmail.com",
-        "sales@niftysolutions.co.in",
-        "strategyworks.in@gmail.com",
-        "support@contactout.com",
-        "support@firetempmail.com",
-        "support@niftysolutions.co.in",
-        "your.name@provider.com"
+        "abuse@klaviyo.com",
+        "contact@sollo.ai",
+        "eilene.hutton@aol.com",
+        "example@company.com",
+        "hello@simplified.com",
+        "info@zetaglobal.com",
+        "investors@toptal.com",
+        "ir@zetaglobal.com",
+        "partners@klaviyo.com",
+        "partners@toptal.com",
+        "press@klaviyo.com",
+        "press@toptal.com",
+        "reportphishing@klaviyo.com",
+        "sales@klaviyo.com",
+        "security@klaviyo.com",
+        "steve.schirr@toptal.com",
+        "support@pollo.ai",
+        "support@toptal.com",
+        "trust@klaviyo.com",
+        "u003esupport@pollo.ai",
+        "you@company.com"
+    ],
+    "all_contact_numbers": [
+        "+1.888.867.7001",
+        "0 9 8 7 6 5 4 3 2 1",
+        "212-967-5055",
+        "941) 951-1331"
     ],
     "linkedin_profiles": [
         {
-            "name": "Anas Sayyed",
-            "profile_url": "https://ae.linkedin.com/in/anassayyed2000",
-            "snippet": "MBA in Sales & Marketing | Currently building and scaling operations from the ground up at KIPL one of India’s trusted names in reinforcing bar coupler technology, serving clients like L&T, Afcons, DMRC, and Shapoorji Pallonji. Always open to connecting with professionals in infrastructure, construction, and operations.",
-            "emails": []
-        },
-        {
-            "name": "Preeti Lobana",
-            "profile_url": "https://in.linkedin.com/in/preeti-lobana-2a4b49",
-            "snippet": "Preeti Lobana Gurugram, Haryana, India 17K followers 500+ connections See your mutual connections Google Vice President – Marketing & Digital Head, Sterling Holidays | Integrated Marketing, Digital Commerce, Customer Experience & AI-Led Growth · I build integrated marketing systems that turn brand preference into measurable revenue. I am Vice President – Marketing | Digital Head at Sterling Holidays, part of Thomas Cook India, leading the digital growth agenda across a 78-resort ... View Chetan Shah iafteru@gmail.com’s profile on LinkedIn, a professional community of 1 billion members. Experience: Google · Location: Oakland · 500+ connections on LinkedIn. View Sameer Samat’s profile on LinkedIn, a professional community of 1 billion members. পরিচয় Result-focused Food Technologist and multi-dimensional manufacturing professional with 20+ years of experience in food production, operations management, product development, process improvement, and food safety system development. I'm a Senior Operations & Supply Chain Executive with 30+ years of experience driving transformation, EBITDA improvement, and cost optimization in FMCG and Food industries — 16 of those at Director/VP level reporting directly to CEOs. Throughout my career I've built and led high-performance teams of up to 1,350 people, managed multi-site operations across Mexico and Latin America, and ...",
-            "emails": [
-                "iafteru@gmail.com"
+            "name": "Attique Naseer",
+            "headline": "Google Ads Expert | Performance Marketer | LinkedIn",
+            "profile_url": "https://www.linkedin.com/in/attiquenaseer",
+            "snippet": "TikTok & LinkedIn Ads. Email Marketing (Lead Nurturing, Automation). Website Optimization (Landing Pages, Conversion Rate). Funnel Strategy & Budget Planning.",
+            "emails": [],
+            "contact_number": null,
+            "contact_numbers": [],
+            "location": null,
+            "website": null,
+            "address": null,
+            "matched_company": null,
+            "contact_sources": [
+                "https://www.freelancer.com/portfolio-items/40035-naheed-concepts",
+                "https://www.freelancer.ie/portfolio-items/40023-toon-character",
+                "https://www.seoclerk.com/user/attiquenaseer",
+                "https://www.scamadviser.com/ru/sitemap/daily/top/17",
+                "https://rumble.com/v1y1fww-funniest-animals-video-funny-dogs-and-cats-try-not-to-laugh-animals-2022.html",
+                "https://attiquenaseer.com/author/admin",
+                "https://www.freelancer.com/portfolio-items/40023-pakistan-expo"
             ]
         },
         {
-            "name": "Mmohit Sharma",
-            "profile_url": "https://in.linkedin.com/in/mohit-sharma-marketing",
-            "snippet": "Vice President – Marketing & Digital Head, Sterling Holidays | Integrated Marketing, Digital Commerce, Customer Experience & AI-Led Growth · I build integrated marketing systems that turn brand preference into measurable revenue. I am Vice President – Marketing | Digital Head at Sterling Holidays, part of Thomas Cook India, leading the digital growth agenda across a 78-resort ... View Chetan Shah iafteru@gmail.com’s profile on LinkedIn, a professional community of 1 billion members. Experience: Google · Location: Oakland · 500+ connections on LinkedIn. View Sameer Samat’s profile on LinkedIn, a professional community of 1 billion members. পরিচয় Result-focused Food Technologist and multi-dimensional manufacturing professional with 20+ years of experience in food production, operations management, product development, process improvement, and food safety system development. I'm a Senior Operations & Supply Chain Executive with 30+ years of experience driving transformation, EBITDA improvement, and cost optimization in FMCG and Food industries — 16 of those at Director/VP level reporting directly to CEOs. Throughout my career I've built and led high-performance teams of up to 1,350 people, managed multi-site operations across Mexico and Latin America, and ...",
+            "name": "Jay Rhee",
+            "headline": "Marketing Agent for Neobolt Systems. | LinkedIn",
+            "profile_url": "https://www.linkedin.com/in/jay-rhee-875580236",
+            "snippet": "My name is Jay Rhee and I work for Neobolt Systems. I hope to pursue this career as a marketing agent to connect with people and bring a positive environment in the workspace.",
+            "emails": [],
+            "contact_number": null,
+            "contact_numbers": [],
+            "location": null,
+            "website": null,
+            "address": null,
+            "matched_company": "people and bring a positive environment in the workspace",
+            "contact_sources": []
+        },
+        {
+            "name": "Jamie Gunnoe",
+            "headline": "Marketing Agent | LinkedIn",
+            "profile_url": "https://www.linkedin.com/in/jamie-gunnoe-b840ab253",
+            "snippet": "I own my own marketing agency called JNG Media · Experience: Self-employed · Location: Athens. View Jamie Gunnoe’s profile on LinkedIn, a professional community of 1 billion members.",
+            "emails": [],
+            "contact_number": null,
+            "contact_numbers": [],
+            "location": "Athens",
+            "website": null,
+            "address": null,
+            "matched_company": "Self-employed",
+            "contact_sources": []
+        },
+        {
+            "name": "Anthony Atilano",
+            "headline": "Email Income Expert - Self Employed | LinkedIn",
+            "profile_url": "https://www.linkedin.com/in/anthony-atilano-b56148178",
+            "snippet": "Anthony Atilano. Owner/creator of the company Tone Gardens, Certified Instagram and Email Marketing Agent. Los Angeles Metropolitan Area. 25 followers 24 connections.",
+            "emails": [],
+            "contact_number": null,
+            "contact_numbers": [],
+            "location": null,
+            "website": null,
+            "address": null,
+            "matched_company": null,
+            "contact_sources": []
+        },
+        {
+            "name": "Youdigi Marketing",
+            "headline": "Marketing Agent... | LinkedIn",
+            "profile_url": "https://www.linkedin.com/in/youdigi-marketing-40bb01193",
+            "snippet": "3 years complete | Learn more about Youdigi Marketing's work experience, education, connections & more by visiting their profile on LinkedIn.",
+            "emails": [],
+            "contact_number": null,
+            "contact_numbers": [],
+            "location": null,
+            "website": null,
+            "address": null,
+            "matched_company": null,
+            "contact_sources": []
+        },
+        {
+            "name": "Eilene Hutton",
+            "headline": "Advertising and Marketing Agent - EM... | LinkedIn",
+            "profile_url": "https://www.linkedin.com/in/eilenehutton1",
+            "snippet": "Television advertising sales to both advertising agencies and direct accounts. Achieved both highest total sales and highest unit rate records. Left station to start ad agency.",
             "emails": [
-                "iafteru@gmail.com"
+                "eilene.hutton@aol.com"
+            ],
+            "contact_number": "941) 951-1331",
+            "contact_numbers": [
+                "941) 951-1331",
+                "941-228-6101"
+            ],
+            "location": "Greater Pittsburgh Region · 500+ connections on LinkedIn",
+            "website": null,
+            "address": null,
+            "matched_company": null,
+            "contact_sources": [
+                "https://www.zoominfo.com/p/Eilene-Hutton/1996264569",
+                "https://www.allbiz.com/business/em-hutton-advertising-941-951-1331",
+                "https://florida.radaris.com/person/Eilene-Hutton/1504286266",
+                "https://www.whitepages.com/name/Eilene-Hutton",
+                "https://www.corporationwiki.com/Florida/Sarasota/eilene-m-hutton-P4906079.aspx"
             ]
-        },
-        {
-            "name": "Chetan Shah iafteru@gmail.com",
-            "profile_url": "https://www.linkedin.com/in/chetan-shah-iafteru-gmail-com-18800312",
-            "snippet": "View Chetan Shah iafteru@gmail.com’s profile on LinkedIn, a professional community of 1 billion members. Experience: Google · Location: Oakland · 500+ connections on LinkedIn. View Sameer Samat’s profile on LinkedIn, a professional community of 1 billion members. পরিচয় Result-focused Food Technologist and multi-dimensional manufacturing professional with 20+ years of experience in food production, operations management, product development, process improvement, and food safety system development. I'm a Senior Operations & Supply Chain Executive with 30+ years of experience driving transformation, EBITDA improvement, and cost optimization in FMCG and Food industries — 16 of those at Director/VP level reporting directly to CEOs. Throughout my career I've built and led high-performance teams of up to 1,350 people, managed multi-site operations across Mexico and Latin America, and ...",
-            "emails": [
-                "iafteru@gmail.com"
-            ]
-        },
-        {
-            "name": "Sameer Samat",
-            "profile_url": "https://www.linkedin.com/in/sameersamat",
-            "snippet": "Experience: Google · Location: Oakland · 500+ connections on LinkedIn. View Sameer Samat’s profile on LinkedIn, a professional community of 1 billion members. পরিচয় Result-focused Food Technologist and multi-dimensional manufacturing professional with 20+ years of experience in food production, operations management, product development, process improvement, and food safety system development. I'm a Senior Operations & Supply Chain Executive with 30+ years of experience driving transformation, EBITDA improvement, and cost optimization in FMCG and Food industries — 16 of those at Director/VP level reporting directly to CEOs. Throughout my career I've built and led high-performance teams of up to 1,350 people, managed multi-site operations across Mexico and Latin America, and ...",
-            "emails": []
-        },
-        {
-            "name": "Kazi Mohiuddin, General Manager-Operations Food ...",
-            "profile_url": "https://bd.linkedin.com/in/kazi-mohiuddin",
-            "snippet": "পরিচয় Result-focused Food Technologist and multi-dimensional manufacturing professional with 20+ years of experience in food production, operations management, product development, process improvement, and food safety system development.",
-            "emails": []
-        },
-        {
-            "name": "Leonardo Jiménez Ramos",
-            "profile_url": "https://mx.linkedin.com/in/leonardojimenezramos",
-            "snippet": "I'm a Senior Operations & Supply Chain Executive with 30+ years of experience driving transformation, EBITDA improvement, and cost optimization in FMCG and Food industries — 16 of those at Director/VP level reporting directly to CEOs. Throughout my career I've built and led high-performance teams of up to 1,350 people, managed multi-site operations across Mexico and Latin America, and ...",
-            "emails": []
-        },
-        {
-            "name": "R.Ramakrishna (rkay1952@gmail.com)",
-            "profile_url": "https://in.linkedin.com/in/ramakrishna",
-            "snippet": "R.Ramakrishna (rkay1952@gmail.com). Chennai, Tamil Nadu, India. 3K followers 500+ connections. See your mutual connections.Maggie Ban, Indian, Chinese and the Swiss connection with Indian Public!! China produces maximum noodles in the world.",
-            "emails": [
-                "rkay1952@gmail.com"
-            ]
-        },
-        {
-            "name": "Yogie Riyadhi",
-            "profile_url": "https://id.linkedin.com/in/yogie-riyadhi",
-            "snippet": "Fashion Company - Business Development Expansion 9. Packaging and Printing Company - Head of OEM 10. Heavy Equipment and Truck Company - Sales – Dump Truck 11. Transportation/Public Applications - Head of Ride-Hailing - Senior Manager Digital Marketing 12.",
-            "emails": []
-        },
-        {
-            "name": "Fandi Prathama",
-            "profile_url": "https://id.linkedin.com/in/fprathama",
-            "snippet": "Digital Marketing Directed the digital marketing strategies, including SEO, CRM, and performance marketing as well as data generation for user acquisition and retention purposes. Brand Marketing & Partnership Directed the company’s branding str...",
-            "emails": []
-        },
-        {
-            "name": "Jay N (strategyworks.in@gmail.com)",
-            "profile_url": "https://in.linkedin.com/in/strategyworks",
-            "snippet": "Location: Bengaluru · 500+ connections on LinkedIn. View Jay N (strategyworks.in@gmail.com)’s profile on LinkedIn, a professional community of 1 billion members.The Ultimate Guide to Free AI Tools for Marketing in 2026.",
-            "emails": [
-                "strategyworks.in@gmail.com"
-            ]
-        },
-        {
-            "name": "S. Mallick",
-            "profile_url": "https://in.linkedin.com/in/smallick1303",
-            "snippet": "At Wordapter Content Marketing Services, we understand the power of content marketing, and we're here to help you achieve your digital marketing goals. Our team of skilled writers can help you create content that drives traffic, generates leads, and boosts your online visibility.",
-            "emails": []
-        },
-        {
-            "name": "Digital Marketing Services In Lahore",
-            "profile_url": "https://pk.linkedin.com/in/digital-marketing-services-in-lahore-04642b269",
-            "snippet": "View Digital Marketing Services In Lahore’s profile on LinkedIn, a professional community of 1 billion members.View mutual connections with Digital Marketing.",
-            "emails": []
         }
     ],
     "sites_data": [
         {
-            "domain": "niftysolutions.co.in",
-            "target_url": "https://niftysolutions.co.in",
-            "execution_time_seconds": 26.4,
-            "emails_count": 3,
-            "emails": [
-                "career@niftysolutions.co.in",
-                "sales@niftysolutions.co.in",
-                "support@niftysolutions.co.in"
-            ],
-            "pages_visited": [
-                "https://niftysolutions.co.in",
-                "https://niftysolutions.co.in/about",
-                "https://niftysolutions.co.in/about-us",
-                "https://niftysolutions.co.in/contact",
-                "https://niftysolutions.co.in/contact-us"
-            ]
-        },
-        {
-            "domain": "firetempmail.com",
-            "target_url": "https://firetempmail.com",
-            "execution_time_seconds": 26.45,
-            "emails_count": 5,
-            "emails": [
-                "abuse@firetempmail.com",
-                "bone918@offrework.click",
-                "business@firetempmail.com",
-                "hello@firetempmail.com",
-                "support@firetempmail.com"
-            ],
-            "pages_visited": [
-                "https://firetempmail.com",
-                "https://firetempmail.com/about",
-                "https://firetempmail.com/about-us",
-                "https://firetempmail.com/contact",
-                "https://firetempmail.com/contact-us"
-            ]
-        },
-        {
-            "domain": "digitalmarketingdeal.com",
-            "target_url": "https://digitalmarketingdeal.com",
-            "execution_time_seconds": 27.05,
+            "domain": "simplified.com",
+            "target_url": "https://simplified.com",
+            "execution_time_seconds": 5.73,
             "emails_count": 1,
             "emails": [
-                "contact@digitalmarketingdeal.com"
+                "hello@simplified.com"
             ],
+            "contact_numbers": [],
+            "website": "https://simplified.com",
             "pages_visited": [
-                "https://digitalmarketingdeal.com",
-                "https://digitalmarketingdeal.com/about",
-                "https://digitalmarketingdeal.com/about-us",
-                "https://digitalmarketingdeal.com/contact",
-                "https://digitalmarketingdeal.com/contact-us"
+                "https://simplified.com",
+                "https://simplified.com/about",
+                "https://simplified.com/about-us",
+                "https://simplified.com/contact",
+                "https://simplified.com/contact-us"
             ]
         },
         {
-            "domain": "contactout.com",
-            "target_url": "https://contactout.com",
-            "execution_time_seconds": 27.37,
-            "emails_count": 9,
+            "domain": "grokipedia.com",
+            "target_url": "https://grokipedia.com",
+            "execution_time_seconds": 5.83,
+            "emails_count": 0,
+            "emails": [],
+            "contact_numbers": [],
+            "website": "https://grokipedia.com",
+            "pages_visited": [
+                "https://grokipedia.com",
+                "https://grokipedia.com/about",
+                "https://grokipedia.com/about-us",
+                "https://grokipedia.com/contact",
+                "https://grokipedia.com/contact-us"
+            ]
+        },
+        {
+            "domain": "instantly.ai",
+            "target_url": "https://instantly.ai",
+            "execution_time_seconds": 6.36,
+            "emails_count": 0,
+            "emails": [],
+            "contact_numbers": [],
+            "website": "https://instantly.ai",
+            "pages_visited": [
+                "https://instantly.ai",
+                "https://instantly.ai/about",
+                "https://instantly.ai/about-us",
+                "https://instantly.ai/contact",
+                "https://instantly.ai/contact-us"
+            ]
+        },
+        {
+            "domain": "sollo.ai",
+            "target_url": "https://sollo.ai",
+            "execution_time_seconds": 7.56,
+            "emails_count": 1,
             "emails": [
-                "img-google@2x.png",
-                "img-people-farida-charania@2x.png",
-                "img-photo-aqeel-hassan@2x.png",
-                "img-photo-ekin-bayildiran@2x.png",
-                "img-photo-evan-m-wolfson@2x.png",
-                "img-photo-jon-nowakowski@2x.png",
-                "img-photo-ryan-brogan@2x.png",
-                "img-photo-tobia-st-germain@2x.png",
-                "support@contactout.com"
+                "contact@sollo.ai"
             ],
+            "contact_numbers": [],
+            "website": "https://sollo.ai",
             "pages_visited": [
-                "https://contactout.com",
-                "https://contactout.com/about",
-                "https://contactout.com/about-us",
-                "https://contactout.com/contact",
-                "https://contactout.com/contact-us"
+                "https://sollo.ai",
+                "https://sollo.ai/about",
+                "https://sollo.ai/about-us",
+                "https://sollo.ai/contact",
+                "https://sollo.ai/contact-us"
             ]
         },
         {
-            "domain": "onlinemarketingindia.com",
-            "target_url": "https://onlinemarketingindia.com",
-            "execution_time_seconds": 29.16,
+            "domain": "www.klaviyo.com",
+            "target_url": "https://www.klaviyo.com",
+            "execution_time_seconds": 9.69,
+            "emails_count": 7,
+            "emails": [
+                "abuse@klaviyo.com",
+                "partners@klaviyo.com",
+                "press@klaviyo.com",
+                "reportphishing@klaviyo.com",
+                "sales@klaviyo.com",
+                "security@klaviyo.com",
+                "trust@klaviyo.com"
+            ],
+            "contact_numbers": [],
+            "website": "https://www.klaviyo.com",
+            "pages_visited": [
+                "https://www.klaviyo.com",
+                "https://www.klaviyo.com/about",
+                "https://www.klaviyo.com/about-us",
+                "https://www.klaviyo.com/contact",
+                "https://www.klaviyo.com/contact-us"
+            ]
+        },
+        {
+            "domain": "www.jasper.ai",
+            "target_url": "https://www.jasper.ai",
+            "execution_time_seconds": 10.42,
+            "emails_count": 0,
+            "emails": [],
+            "contact_numbers": [],
+            "website": "https://www.jasper.ai",
+            "pages_visited": [
+                "https://www.jasper.ai",
+                "https://www.jasper.ai/about",
+                "https://www.jasper.ai/about-us",
+                "https://www.jasper.ai/contact",
+                "https://www.jasper.ai/contact-us"
+            ]
+        },
+        {
+            "domain": "www.zetaglobal.com",
+            "target_url": "https://www.zetaglobal.com",
+            "execution_time_seconds": 5.06,
             "emails_count": 2,
             "emails": [
-                "%20plannerbrand@gmail.com",
-                "plannerbrand@gmail.com"
+                "info@zetaglobal.com",
+                "ir@zetaglobal.com"
             ],
+            "contact_numbers": [
+                "212-967-5055"
+            ],
+            "website": "https://www.zetaglobal.com",
             "pages_visited": [
-                "https://onlinemarketingindia.com",
-                "https://onlinemarketingindia.com/about",
-                "https://onlinemarketingindia.com/about-us",
-                "https://onlinemarketingindia.com/contact",
-                "https://onlinemarketingindia.com/contact-us"
+                "https://www.zetaglobal.com",
+                "https://www.zetaglobal.com/about",
+                "https://www.zetaglobal.com/about-us",
+                "https://www.zetaglobal.com/contact",
+                "https://www.zetaglobal.com/contact-us"
             ]
         },
         {
-            "domain": "fontpainter.com",
-            "target_url": "https://fontpainter.com",
-            "execution_time_seconds": 29.18,
-            "emails_count": 0,
-            "emails": [],
-            "pages_visited": [
-                "https://fontpainter.com",
-                "https://fontpainter.com/about",
-                "https://fontpainter.com/about-us",
-                "https://fontpainter.com/contact",
-                "https://fontpainter.com/contact-us"
-            ]
-        },
-        {
-            "domain": "rocketreach.co",
-            "target_url": "https://rocketreach.co",
-            "execution_time_seconds": 3.91,
-            "emails_count": 0,
-            "emails": [],
-            "pages_visited": [
-                "https://rocketreach.co",
-                "https://rocketreach.co/about",
-                "https://rocketreach.co/about-us",
-                "https://rocketreach.co/contact",
-                "https://rocketreach.co/contact-us"
-            ]
-        },
-        {
-            "domain": "rotatingsandwiches.com",
-            "target_url": "https://rotatingsandwiches.com",
-            "execution_time_seconds": 3.87,
+            "domain": "writesonic.com",
+            "target_url": "https://writesonic.com",
+            "execution_time_seconds": 11.43,
             "emails_count": 1,
             "emails": [
-                "rotating.sandwiches.inquiries@gmail.com"
+                "you@company.com"
             ],
+            "contact_numbers": [
+                "0 9 8 7 6 5 4 3 2 1"
+            ],
+            "website": "https://writesonic.com",
             "pages_visited": [
-                "https://rotatingsandwiches.com",
-                "https://rotatingsandwiches.com/about",
-                "https://rotatingsandwiches.com/about-us",
-                "https://rotatingsandwiches.com/contact",
-                "https://rotatingsandwiches.com/contact-us"
+                "https://writesonic.com",
+                "https://writesonic.com/about",
+                "https://writesonic.com/about-us",
+                "https://writesonic.com/contact",
+                "https://writesonic.com/contact-us"
             ]
         },
         {
-            "domain": "tmail.io",
-            "target_url": "https://tmail.io",
-            "execution_time_seconds": 10.54,
-            "emails_count": 4,
+            "domain": "pollo.ai",
+            "target_url": "https://pollo.ai",
+            "execution_time_seconds": 12.06,
+            "emails_count": 2,
             "emails": [
-                "faswob@yahoomail.pro",
-                "jupnee@imail.edu.pl",
-                "mojgaw@yahoomail.pro",
-                "rofliz@imail.edu.pl"
+                "support@pollo.ai",
+                "u003esupport@pollo.ai"
             ],
+            "contact_numbers": [],
+            "website": "https://pollo.ai",
             "pages_visited": [
-                "https://tmail.io",
-                "https://tmail.io/about",
-                "https://tmail.io/about-us",
-                "https://tmail.io/contact",
-                "https://tmail.io/contact-us"
+                "https://pollo.ai",
+                "https://pollo.ai/about",
+                "https://pollo.ai/about-us",
+                "https://pollo.ai/contact",
+                "https://pollo.ai/contact-us"
             ]
         },
         {
-            "domain": "www.glassdoor.co.in",
-            "target_url": "https://www.glassdoor.co.in",
-            "execution_time_seconds": 10.3,
+            "domain": "www.wask.co",
+            "target_url": "https://www.wask.co",
+            "execution_time_seconds": 6.7,
             "emails_count": 1,
             "emails": [
-                "your.name@provider.com"
+                "example@company.com"
             ],
+            "contact_numbers": [],
+            "website": "https://www.wask.co",
             "pages_visited": [
-                "https://www.glassdoor.co.in",
-                "https://www.glassdoor.co.in/about",
-                "https://www.glassdoor.co.in/about-us",
-                "https://www.glassdoor.co.in/contact",
-                "https://www.glassdoor.co.in/contact-us"
+                "https://www.wask.co",
+                "https://www.wask.co/about",
+                "https://www.wask.co/about-us",
+                "https://www.wask.co/contact",
+                "https://www.wask.co/contact-us"
             ]
         },
         {
-            "domain": "advertisindia.in",
-            "target_url": "https://advertisindia.in",
-            "execution_time_seconds": 44.41,
-            "emails_count": 3,
+            "domain": "www.toptal.com",
+            "target_url": "https://www.toptal.com",
+            "execution_time_seconds": 7.91,
+            "emails_count": 5,
             "emails": [
-                "%20%20advertiseindiaofficial@gmail.com",
-                "3-bhk-@-1.03cr-only-9.png",
-                "advertiseindiaofficial@gmail.com"
+                "investors@toptal.com",
+                "partners@toptal.com",
+                "press@toptal.com",
+                "steve.schirr@toptal.com",
+                "support@toptal.com"
             ],
-            "pages_visited": [
-                "https://advertisindia.in",
-                "https://advertisindia.in/about",
-                "https://advertisindia.in/about-us",
-                "https://advertisindia.in/contact",
-                "https://advertisindia.in/contact-us"
-            ]
-        },
-        {
-            "domain": "in.pinterest.com",
-            "target_url": "https://in.pinterest.com",
-            "execution_time_seconds": 45.71,
-            "emails_count": 0,
-            "emails": [],
-            "pages_visited": [
-                "https://in.pinterest.com",
-                "https://in.pinterest.com/about",
-                "https://in.pinterest.com/about-us",
-                "https://in.pinterest.com/contact",
-                "https://in.pinterest.com/contact-us"
-            ]
-        },
-        {
-            "domain": "www.meindia.in",
-            "target_url": "https://www.meindia.in",
-            "execution_time_seconds": 18.03,
-            "emails_count": 3,
-            "emails": [
-                "info@example.com",
-                "info@meindia.in",
-                "meindia.ads@gmail.com"
+            "contact_numbers": [
+                "+1.888.867.7001"
             ],
+            "website": "https://www.toptal.com",
             "pages_visited": [
-                "https://www.meindia.in",
-                "https://www.meindia.in/about",
-                "https://www.meindia.in/about-us",
-                "https://www.meindia.in/contact",
-                "https://www.meindia.in/contact-us"
+                "https://www.toptal.com",
+                "https://www.toptal.com/about",
+                "https://www.toptal.com/about-us",
+                "https://www.toptal.com/contact",
+                "https://www.toptal.com/contact-us"
             ]
         }
     ]

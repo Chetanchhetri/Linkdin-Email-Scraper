@@ -1,0 +1,70 @@
+{
+    "query": "AI Engineer",
+    "metrics": {
+        "total_users_extracted": 6,
+        "total_unique_emails": 0,
+        "total_unique_phones": 0,
+        "total_domains_crawled": 0,
+        "total_execution_time_seconds": 15.35,
+        "total_execution_time_formatted": "0m 15.35s"
+    },
+    "users": [
+        {
+            "name": "Corneliu Frunze",
+            "linkedin_url": "https://ro.linkedin.com/in/id-cf",
+            "email": "N/A",
+            "phone": "N/A",
+            "location": "N/A",
+            "website": "N/A",
+            "snippet": "AI/ML engineer with 2+ years building production systems, now focused on LLMs, RAG architectures, and AI agents."
+        },
+        {
+            "name": "Emily M.",
+            "linkedin_url": "https://www.linkedin.com/in/emily-m-437195380",
+            "email": "N/A",
+            "phone": "N/A",
+            "location": "N/A",
+            "website": "N/A",
+            "snippet": "Currently: Actively seeking full-time AI/ML Engineer opportunities across the US! Ready to bring my startup energy and technical skills to tackle real-world challenges."
+        },
+        {
+            "name": "Fiqih Fathor Rachim",
+            "linkedin_url": "https://id.linkedin.com/in/fiqihfr",
+            "email": "N/A",
+            "phone": "N/A",
+            "location": "N/A",
+            "website": "N/A",
+            "snippet": "Tentang. AI Engineer | Production Machine Learning Specialist. I develop AI/ML systems for document processing and automation."
+        },
+        {
+            "name": "Omar Ali",
+            "linkedin_url": "https://eg.linkedin.com/in/omarali24",
+            "email": "N/A",
+            "phone": "N/A",
+            "location": "N/A",
+            "website": "N/A",
+            "snippet": "Machine Learning & AI Intern. The Address Investments.Engineer writes just enough code to see if it's feasible. Helps understand technical risk, often related to performance."
+        },
+        {
+            "name": "arka hamzah",
+            "linkedin_url": "https://id.linkedin.com/in/arkahamzah/in",
+            "email": "N/A",
+            "phone": "N/A",
+            "location": "N/A",
+            "website": "N/A",
+            "snippet": "Learn AI Agents and Agentic AI for free. You do not need another expensive course to start. Some of the best learning resources are already available on YouTube..."
+        },
+        {
+            "name": "Mounika P",
+            "linkedin_url": "https://www.linkedin.com/in/mounika-p-6b2a7b282",
+            "email": "N/A",
+            "phone": "N/A",
+            "location": "N/A",
+            "website": "N/A",
+            "snippet": "Add new skills with these courses. 1h 56m. Deep Learning and Generative AI: Data Prep, Analysis, and Visualization with Python."
+        }
+    ],
+    "all_unique_emails": [],
+    "all_unique_phones": [],
+    "sites_data": []
+}

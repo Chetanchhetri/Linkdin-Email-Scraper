@@ -18,6 +18,10 @@ except ImportError:
     from duckduckgo_search import DDGS
 
 EMAIL_REGEX = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+PHONE_REGEX = r'(?<!\d)(?:\+?\d[\d .()\-]{7,}\d)(?!\d)'
+LOCATION_LABELS = ("location", "based in", "located in", "city", "office", "headquarters")
+ADDRESS_LABELS = ("address", "office address", "registered office", "hq", "head office")
+COMMON_SOCIAL_DOMAINS = ("linkedin.com", "facebook.com", "instagram.com", "twitter.com", "x.com", "youtube.com")
 
 IGNORED_SERP_DOMAINS = (
     "google.", "gstatic.com", "youtube.com", "bing.com", "microsoft.com",
@@ -71,6 +75,157 @@ def fetch_serp_urls(query: str, max_results: int = 50) -> list[str]:
     return final_urls
 
 
+def _extract_phone(text: str) -> str | None:
+    candidates = []
+    for match in re.findall(PHONE_REGEX, text or ""):
+        digits = re.sub(r"\D", "", match)
+        if 10 <= len(digits) <= 15:
+            candidates.append(match.strip())
+    return candidates[0] if candidates else None
+
+
+def _extract_labeled_value(text: str, labels: tuple[str, ...]) -> str | None:
+    if not text:
+        return None
+    label_pattern = "|".join(re.escape(x) for x in labels)
+    m = re.search(rf"(?:{label_pattern})\s*[:\-–]\s*([^|.;\n]{{2,100}})", text, re.IGNORECASE)
+    return m.group(1).strip() if m else None
+
+
+def _clean_candidate_url(url: str) -> str | None:
+    if not url or not url.startswith(("http://", "https://")):
+        return None
+    domain = urlparse(url).netloc.lower()
+    if not domain or any(x in domain for x in COMMON_SOCIAL_DOMAINS):
+        return None
+    return url.split("?")[0].rstrip("/")
+
+
+def _company_from_profile(headline: str, snippet: str) -> str | None:
+    """Best-effort extraction of an employer/company from indexed profile text."""
+    text = f"{headline or ''} | {snippet or ''}"
+    # Common LinkedIn result format: "Role at Company | LinkedIn"
+    patterns = [
+        r'\bat\s+([^|•·\n]{2,80})',
+        r'\bwith\s+([^|•·\n]{2,80})',
+        r'\b@\s*([^|•·\n]{2,80})',
+        r'\b(?:Experience|Company)\s*[:\-]\s*([^|•·\n]{2,80})',
+    ]
+    for pat in patterns:
+        m = re.search(pat, text, re.IGNORECASE)
+        if m:
+            value = re.sub(r'\s+', ' ', m.group(1)).strip(' -–—,.;')
+            if value and len(value.split()) <= 12:
+                return value
+    return None
+
+
+def _search_public_contact(name: str, role: str, profile_url: str = "", headline: str = "",
+                           snippet: str = "", location_hint: str = "") -> dict:
+    """Find publicly indexed professional contact details using identity-specific searches.
+
+    This does not log into LinkedIn, bypass access controls, or infer a private contact
+    detail. Results are accepted only when they come from publicly indexed pages.
+    """
+    candidate_websites = []
+    found_emails = set()
+    found_phones = set()
+    locations = []
+    addresses = []
+    source_urls = []
+
+    company = _company_from_profile(headline, snippet)
+    slug = urlparse(profile_url).path.rstrip('/').split('/')[-1] if profile_url else ''
+    identity_parts = [f'"{name}"']
+    if company:
+        identity_parts.append(f'"{company}"')
+    elif headline:
+        identity_parts.append(f'"{headline[:80]}"')
+    identity = ' '.join(identity_parts)
+
+    # Search for the person's identity, not merely the generic job role. This substantially
+    # reduces accidental association of one person's phone/email with another person.
+    queries = [
+        f'{identity} email',
+        f'{identity} contact',
+        f'{identity} phone',
+        f'{identity} website',
+        f'{identity} "contact info"',
+    ]
+    if slug:
+        queries += [
+            f'"{slug}" email',
+            f'"{slug}" contact',
+        ]
+    if location_hint:
+        queries = [q + f' "{location_hint}"' for q in queries[:5]] + queries[5:]
+
+    # Keep only domains that are plausibly professional sources. LinkedIn itself is not
+    # crawled; its public search result is used only to identify the person.
+    allowed_hint_domains = ('github.com', 'about.me', 'medium.com', 'substack.com')
+
+    try:
+        with DDGS() as ddgs:
+            for q in queries:
+                try:
+                    results = list(ddgs.text(q, max_results=10))
+                except Exception:
+                    continue
+                for result in results:
+                    title = (result.get('title') or '').strip()
+                    body = (result.get('body') or '').strip()
+                    href = result.get('href') or result.get('url') or ''
+                    combined = f'{title} {body}'
+                    lower = combined.lower()
+
+                    # Require the person's name to occur in the result text for contact
+                    # data to be considered a match.
+                    name_tokens = [t.lower() for t in re.findall(r"[A-Za-z][A-Za-z'-]+", name) if len(t) > 1]
+                    if name_tokens and not all(token in lower for token in name_tokens[:2]):
+                        continue
+
+                    found_emails.update(
+                        m.lower().rstrip('.')
+                        for m in re.findall(EMAIL_REGEX, combined, re.IGNORECASE)
+                    )
+                    for match in re.findall(PHONE_REGEX, combined):
+                        digits = re.sub(r'\D', '', match)
+                        if 10 <= len(digits) <= 15:
+                            found_phones.add(re.sub(r'\s+', ' ', match.strip()))
+
+                    loc = _extract_labeled_value(combined, LOCATION_LABELS)
+                    addr = _extract_labeled_value(combined, ADDRESS_LABELS)
+                    if loc and loc not in locations:
+                        locations.append(loc)
+                    if addr and addr not in addresses:
+                        addresses.append(addr)
+
+                    clean = _clean_candidate_url(href)
+                    if clean:
+                        host = urlparse(clean).netloc.lower()
+                        # Don't treat arbitrary search result pages as the person's website.
+                        if host in allowed_hint_domains or (company and company.lower().replace(' ', '') in host.replace('.', '').replace('-', '')):
+                            if clean not in candidate_websites:
+                                candidate_websites.append(clean)
+                        if clean not in source_urls:
+                            source_urls.append(clean)
+    except Exception as e:
+        print(f'[!] Warning during contact enrichment for {name}: {e}')
+
+    # Prefer business/professional email domains over generic mailbox domains when several
+    # publicly indexed matches exist. We still return all verified indexed matches.
+    return {
+        'emails': sorted(found_emails),
+        'contact_number': sorted(found_phones)[0] if found_phones else None,
+        'contact_numbers': sorted(found_phones),
+        'location': locations[0] if locations else None,
+        'address': addresses[0] if addresses else None,
+        'website': candidate_websites[0] if candidate_websites else None,
+        'contact_sources': source_urls[:10],
+        'matched_company': company,
+    }
+
+
 def fetch_linkedin_profiles(query: str, max_results: int = 20) -> list[dict]:
     profiles = []
     seen_urls = set()
@@ -81,26 +236,28 @@ def fetch_linkedin_profiles(query: str, max_results: int = 20) -> list[dict]:
             href = result.get("href") or result.get("url") or ""
             if "linkedin.com/in/" not in href.lower():
                 continue
-
             clean_url = href.split("?")[0].rstrip("/")
             if clean_url in seen_urls:
                 continue
             seen_urls.add(clean_url)
-
             raw_title = (result.get("title") or "").strip()
-            name = raw_title.split(" - ")[0].split(" | ")[0].strip() or None
+            title_parts = re.split(r"\s[-|]\s", raw_title, maxsplit=1)
+            name = title_parts[0].strip() or None
+            headline = title_parts[1].strip() if len(title_parts) > 1 else None
             snippet = (result.get("body") or "").strip()
-
-            # Extract emails directly from snippet/description text
-            discovered_emails = list(set(
-                m.lower().rstrip('.') for m in re.findall(EMAIL_REGEX, snippet + " " + raw_title, re.IGNORECASE)
-            ))
-
             profiles.append({
                 "name": name,
+                "headline": headline,
                 "profile_url": clean_url,
                 "snippet": snippet,
-                "emails": sorted(discovered_emails)
+                "emails": sorted(set(m.lower().rstrip(".") for m in re.findall(EMAIL_REGEX, snippet + " " + raw_title, re.IGNORECASE))),
+                "contact_number": _extract_phone(snippet),
+                "contact_numbers": [],
+                "location": _extract_labeled_value(snippet, LOCATION_LABELS),
+                "website": None,
+                "address": None,
+                "matched_company": None,
+                "contact_sources": [],
             })
 
     try:
@@ -110,6 +267,36 @@ def fetch_linkedin_profiles(query: str, max_results: int = 20) -> list[dict]:
     except Exception as e:
         print(f"[!] Warning during LinkedIn search execution: {e}")
 
+    # Email/contact/website/location discovery is now automatic for every profile.
+    with ThreadPoolExecutor(max_workers=min(6, max(1, len(profiles)))) as pool:
+        future_map = {
+            pool.submit(
+                _search_public_contact,
+                p["name"],
+                query,
+                p.get("profile_url") or "",
+                p.get("headline") or "",
+                p.get("snippet") or "",
+                p.get("location") or ""
+            ): p
+            for p in profiles if p.get("name")
+        }
+        for future in as_completed(future_map):
+            profile = future_map[future]
+            try:
+                extra = future.result()
+                profile["emails"] = sorted(set(profile["emails"]) | set(extra["emails"]))
+                profile["contact_number"] = extra["contact_number"] or profile["contact_number"]
+                profile["contact_numbers"] = sorted(set(profile.get("contact_numbers", [])) | set(extra.get("contact_numbers", [])))
+                if profile["contact_number"] and profile["contact_number"] not in profile["contact_numbers"]:
+                    profile["contact_numbers"].append(profile["contact_number"])
+                profile["location"] = extra["location"] or profile["location"]
+                profile["website"] = extra["website"] or profile.get("website")
+                profile["address"] = extra["address"] or profile.get("address")
+                profile["matched_company"] = extra.get("matched_company") or profile.get("matched_company")
+                profile["contact_sources"] = extra.get("contact_sources", [])
+            except Exception as e:
+                print(f"[!] Contact enrichment failed: {e}")
     return profiles
 
 
@@ -127,6 +314,7 @@ def crawl_single_site(base_url: str, max_pages: int = 5) -> dict:
         f"{base_url}/about-us",
     ]
     found_emails = set()
+    found_phones = set()
 
     def is_internal_link(url: str) -> bool:
         parsed = urlparse(url)
@@ -157,6 +345,12 @@ def crawl_single_site(base_url: str, max_pages: int = 5) -> dict:
             for match in re.findall(EMAIL_REGEX, raw_html, re.IGNORECASE):
                 found_emails.add(match.lower().rstrip('.'))
 
+            visible_text = BeautifulSoup(raw_html, 'html.parser').get_text(" ", strip=True)
+            for match in re.findall(PHONE_REGEX, visible_text):
+                digits = re.sub(r"\D", "", match)
+                if 10 <= len(digits) <= 15:
+                    found_phones.add(match.strip())
+
             soup = BeautifulSoup(raw_html, 'html.parser')
             for anchor in soup.find_all('a', href=True):
                 href = anchor['href'].strip()
@@ -186,6 +380,8 @@ def crawl_single_site(base_url: str, max_pages: int = 5) -> dict:
         "execution_time_seconds": site_execution_time,
         "emails_count": len(sorted_emails),
         "emails": sorted_emails,
+        "contact_numbers": sorted(found_phones),
+        "website": base_url,
         "pages_visited": sorted(list(visited_urls))
     }
 
@@ -207,6 +403,10 @@ def _build_output(query, results, total_execution_time, all_unique_emails, linke
             "total_execution_time_formatted": f"{int(total_execution_time // 60)}m {round(total_execution_time % 60, 2)}s"
         },
         "all_emails": combined_unique_emails,
+        "all_contact_numbers": sorted(set(
+            [p.get("contact_number") for p in linkedin_profiles if p.get("contact_number")]
+            + [n for site in results for n in site.get("contact_numbers", [])]
+        )),
         "linkedin_profiles": linkedin_profiles,
         "sites_data": results
     }
